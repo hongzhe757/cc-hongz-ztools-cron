@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>cc.hongz</groupId>
+		<artifactId>cc-hongz-ztools</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>cc-hongz-ztools-cron</artifactId>
+	<name>${project.artifactId}</name>
+	<description>定时任务模块（对齐 hutool-cron，Cron 表达式解析 + 调度 + 时间轮）</description>
+
+	<properties>
+		<Automatic-Module-Name>cc.hongz.ztools.cron</Automatic-Module-Name>
+
+		<!-- versions -->
+		<quartz.version>2.4.0</quartz.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>cc.hongz</groupId>
+			<artifactId>cc-hongz-ztools-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>cc.hongz</groupId>
+			<artifactId>cc-hongz-ztools-log</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>cc.hongz</groupId>
+			<artifactId>cc-hongz-ztools-setting</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Quartz -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>${quartz.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.10.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.34</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
