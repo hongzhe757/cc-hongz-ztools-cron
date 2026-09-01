@@ -15,7 +15,7 @@
 
 	<artifactId>cc-hongz-ztools-cron</artifactId>
 	<name>${project.artifactId}</name>
-	<description>定时任务模块（对齐 hutool-cron，Cron 表达式解析 + 调度 + 时间轮）</description>
+	<description>定时任务模块（Cron 表达式解析 + 调度 + 时间轮）</description>
 
 	<properties>
 		<Automatic-Module-Name>cc.hongz.ztools.cron</Automatic-Module-Name>
